@@ -3,18 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hello World</title>
         <link rel="stylesheet" href="css/jquery.mobile-1.3.1.css" />
         <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
         <script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script src="barcodescanner.js"></script>
-        <script src="application.js"></script>
+        <script src="js/application.js"></script>
         <script>
             $(document)
                 .on('pagebeforecreate', Application.updateIcons)
                 .one('deviceready', Application.initApplication);
         </script>
-        <title>Hello World</title>
     </head>
     <body>
         
@@ -32,17 +32,24 @@
             </footer>
         </div>
 
-        <div id="scan-page" data-role="page" data-title="Scan Page">
+<div id="scan-page" data-role="page" data-title="Scan Page">
             <header data-role="header">
                 <a href="index.html" data-icon="home" data-iconpos="notext">Home</a>
                 <h1>Barcode scanner and endcoder</h1>
             </header>
             <div data-role="content">
-                <h4>Scan button below</h4>
-                <input type="button" value="Scan Code" id="scan"/>
+                            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
             </div>
-            <div data-role="footer" data-position="fixed">
-                <h4>Footer</h4>
+                <input type="button" value="Scan Code" id="scan"/>
+                <br/>
+                <br/>Data :
+                <br/>
+                <input type="text" name="data" id="data" />
+                <br/>
+                <br/>
+                <input type="button" value="Encode Data" id="encode" />
             </div>
         </div>
     </body>
