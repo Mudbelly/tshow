@@ -49,6 +49,7 @@ var Application = {
    },
     
     initScanPage: function () {
+        alert("ALERT WORKING!")
         $("#scan").click(function () {
             Application.scan();
         });
