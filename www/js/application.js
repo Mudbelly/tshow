@@ -49,9 +49,10 @@ var Application = {
    },
     
     initScanPage: function () {
-        navigator.notification.alert('ALERTTTTTTTTTTTTTT!!!NAVIGATOR', function () {
-         }
-     alert("ALERT!");
+        alert('test');
+        $("#scan").click(function () {
+            Application.scan();
+        });
     },
      
    initListFeedPage: function () {

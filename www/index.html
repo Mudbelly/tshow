@@ -11,14 +11,13 @@
         <script src="barcodescanner.js"></script>
         <script src="js/application.js"></script>
         <script>
-            $(document)
-                .on('pagebeforecreate', Application.updateIcons)
-                .one('deviceready', Application.initApplication);
-        </script>
+         $(document).on('pagebeforecreate orientationchange', Application.updateIcons);
+         $(document).one('deviceready', Application.initApplication);
+      </script>
     </head>
     <body>
         
-        <div id="home" data-role="page">
+        <div data-role="page">
             <header data-role="header" data-back-btn="true">
                 <h1>TradeShow HomeScreen</h1>
             </header>
